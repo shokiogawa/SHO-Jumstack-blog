@@ -15,3 +15,17 @@ export type STORIES = {
     contents: [STORY]
   }
 }
+
+export type STORYDETAIL = {
+  staticStoryDetail: {
+    id: string,
+    publishedAt: string,
+    title: string,
+    thumnail: {
+      url: string
+      height: number
+      width: number
+    }
+    content: string
+  }
+}
