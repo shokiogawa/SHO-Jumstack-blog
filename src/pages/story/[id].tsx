@@ -34,6 +34,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       staticStoryDetail: json
-    }
+    },
+    revalidate: 10
   }
 }
