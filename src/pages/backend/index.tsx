@@ -3,7 +3,7 @@ import { NextPage } from "next";
 const Backend: NextPage = () => {
   return (
     <>
-      <h1>バックエンド</h1>
+      <h1>バックエンドの実装をここに書くよ</h1>
     </>
   )
 }
