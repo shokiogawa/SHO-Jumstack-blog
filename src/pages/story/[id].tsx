@@ -4,6 +4,7 @@ import { STORYDETAIL } from "../../types/story";
 import Image from "next/image";
 
 const StoryDetail: NextPage<STORYDETAIL> = ({ staticStoryDetail }) => {
+  if (!staticStoryDetail) return <p>Loading</p>
   return (
     <>
       <div className=" bg-gray-100 m-10 justify-center flex flex-col items-center">

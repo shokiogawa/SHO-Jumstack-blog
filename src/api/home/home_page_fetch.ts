@@ -4,7 +4,8 @@ import { STORIES } from "../../types/story";
 
 export const fetchHomeDataAll = async (): Promise<STORIES> => {
   const data = await client.get({
-    endpoint: 'stories'
+    endpoint: 'stories',
+    queries: { fields: 'id,title,publishedAt,thumnail' }
   })
   return data
 }
