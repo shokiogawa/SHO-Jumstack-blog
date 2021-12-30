@@ -7,7 +7,7 @@ const Home: NextPage<STORIES> = ({ staticHomeData }) => {
   if (!staticHomeData) return <p>Loading</p>
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-10 mx-auto">
         <div className="flex flex-wrap -m-4">
           {staticHomeData && staticHomeData.contents.map((data) => (
             <HomeCard key={data.id} {...data} />
@@ -15,14 +15,6 @@ const Home: NextPage<STORIES> = ({ staticHomeData }) => {
         </div>
       </div>
     </section>
-    // <div>
-    //   <ul>
-    //     {staticHomeData && staticHomeData.contents.map((dataDetail) => (
-    //       <li key={dataDetail.id}>{dataDetail.title}</li>
-    //     )
-    //     )}
-    //   </ul>
-    // </div>
   )
 }
 

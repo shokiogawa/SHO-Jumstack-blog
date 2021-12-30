@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const json = await fetchStoryData(id)
   const seoData: SEO = {
     pageTitle: json.title,
-    pageDescription: json.content,
+    pageDescription: json.description,
     pageUrl: `/story/${json.id}`,
     pageImage: json.thumnail.url
   }
