@@ -3,7 +3,9 @@ import { STORY } from "../types/story";
 import Image from 'next/image'
 import Link from "next/link";
 
-const HomeCard: NextPage<STORY> = ({ title, thumnail, publishedAt, id }) => {
+const HomeCard: NextPage<STORY> = ({ title, thumnail, publishedAt, id, description }) => {
+  const point = description.length < 60 ? '' : '....'
+  const descriptionEdit = description.substr(0, 60) + point
   return (
     <>
       <Link href={`story/${id}`}>
@@ -14,7 +16,7 @@ const HomeCard: NextPage<STORY> = ({ title, thumnail, publishedAt, id }) => {
             <div className="p-6">
               <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">STORY</h2>
               <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{title}</h1>
-              <p className="leading-relaxed mb-3">説明がここに入ります。</p>
+              <p className="leading-relaxed mb-3">{descriptionEdit}</p>
             </div>
           </div>
         </div>

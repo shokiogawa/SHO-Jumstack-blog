@@ -7,7 +7,8 @@ export type STORY = {
     height: number
     width: number
   }
-  content: string
+  content: string,
+  description: string
 }
 
 export type STORIES = {
@@ -17,15 +18,5 @@ export type STORIES = {
 }
 
 export type STORYDETAIL = {
-  staticStoryDetail: {
-    id: string,
-    publishedAt: string,
-    title: string,
-    thumnail: {
-      url: string
-      height: number
-      width: number
-    }
-    content: string
-  }
+  staticStoryDetail: STORY
 }
