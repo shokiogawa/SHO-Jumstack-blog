@@ -17,7 +17,8 @@ export const fetchStoriesPath = async () => {
 export const fetchStoryData = async (contentId: string): Promise<STORY> => {
   const data = await client.get({
     endpoint: 'stories',
-    contentId: contentId
+    contentId: contentId,
+    queries: { fields: 'id,title,publishedAt,thumnail,content' }
   })
   return data
 }
