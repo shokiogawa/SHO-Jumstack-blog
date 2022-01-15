@@ -19,7 +19,7 @@ const StoryDetail: NextPage<Props> = ({ storyDetail, seoData }) => {
         <div className=" bg-gray-100 m-10 justify-center flex flex-col items-center">
           <h1 className="text-2xl font-mono font-bold tracking-wider text-center mb-10 mt-10">{storyDetail.title}</h1>
           <Image className='text-center' src={storyDetail.thumnail.url} height={380} width={800} />
-          <div className={'lg:w-2/3 xl:w-1/2 mt-10 mb-10'}>
+          <div className={'lg:w-2/3 xl:w-1/2 mt-10 mb-10 p-5'}>
             <div className="" dangerouslySetInnerHTML={{ __html: storyDetail.content }}></div>
           </div>
         </div>

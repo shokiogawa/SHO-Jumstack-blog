@@ -11,8 +11,8 @@ const Seo: NextPage<SEO> = ({ pageTitle, pageDescription, pageUrl, pageImage }) 
       <meta name="description" content={description} />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:url" content={pageUrl} />
-      <meta property="og:site_name" content={pageUrl} />
-      <meta property="og:description" content={pageDescription} />
+      <meta property="og:site_name" content={'文系大学院生のテックブログ'} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={pageUrl} />
       <meta name="twitter:card" content="summary_large_image" />

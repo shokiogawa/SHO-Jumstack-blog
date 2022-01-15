@@ -2,8 +2,9 @@ import { NextPage } from "next";
 import { STORY } from "../types/story";
 import Image from 'next/image'
 import Link from "next/link";
+import Story from "../pages/story";
 
-const HomeCard: NextPage<STORY> = ({ title, thumnail, publishedAt, id, description }) => {
+const StoryCard: NextPage<STORY> = ({ title, thumnail, publishedAt, id, description }) => {
   const point = description.length < 60 ? '' : '....'
   const descriptionEdit = description.substr(0, 60) + point
   return (
@@ -25,4 +26,4 @@ const HomeCard: NextPage<STORY> = ({ title, thumnail, publishedAt, id, descripti
   )
 }
 
-export default HomeCard
+export default StoryCard

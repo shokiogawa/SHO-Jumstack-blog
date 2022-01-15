@@ -1,11 +1,11 @@
 //命名: 一覧データの場合(fetchFrontsDataAll)、 詳細の場合(fetchFrontData)、カテゴライズされている場合(fetchFrontsDataCategorized)
 import { client } from '../../libs/client'
-import { STORIES } from "../../types/story";
+import { Home } from '../../types/home';
 
-export const fetchHomeDataAll = async (): Promise<STORIES> => {
+export const fetchHomeDataAll = async (): Promise<Home> => {
   const data = await client.get({
-    endpoint: 'stories',
-    queries: { fields: 'id,title,publishedAt,thumnail,description' }
+    endpoint: 'home',
+
   })
   return data
 }
