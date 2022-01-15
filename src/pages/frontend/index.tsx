@@ -4,6 +4,7 @@ import { FRONTENDS } from "../../types/frontend";
 import FrontendCard from "../../components/frontendCard";
 import Seo from "../../components/seo";
 import { SEO } from "../../types/seo"
+import { fetchSitemapData } from "../../api/sitemap";
 
 
 type Props = {
