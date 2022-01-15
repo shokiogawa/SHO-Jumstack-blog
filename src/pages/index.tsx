@@ -17,7 +17,7 @@ const Home: NextPage<Props> = ({ staticHomeData, seoData }) => {
         <section className="text-gray-600 body-font bg-gray-100 m-5">
           <div className="container px-5 py-24 mx-auto flex flex-wrap flex-col items-center ">
             <img className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 block mx-auto mb-10 object-cover object-center rounded " alt="hero" src={`${staticHomeData.thumnail.url}`} />
-            <div className="flex flex-col w-1/2" >
+            <div className="flex flex-col xl:w-1/2" >
               <div dangerouslySetInnerHTML={{ __html: staticHomeData.content }}></div>
             </div>
           </div>

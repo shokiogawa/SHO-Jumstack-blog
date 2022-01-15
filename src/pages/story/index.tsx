@@ -17,7 +17,7 @@ const Story: NextPage<Props> = ({ staticStory, seoData }) => {
       <Seo {...seoData} />
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-10 mx-auto">
-          <div className="flex flex-wrap -m-4">
+          <div className="flex flex-wrap m-4">
             {staticStory && staticStory.contents.map((data) => (
               <StoryCard key={data.id} {...data} />
             ))}
