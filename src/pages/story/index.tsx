@@ -1,9 +1,10 @@
 import { GetStaticProps, NextPage } from "next";
 import { STORIES } from "../../types/story";
-import HomeCard from '../../components/homeCard'
+import HomeCard from '../../components/storyCard'
 import { fetchStoriesDataAll, fetchStorySEO } from "../../api/story/all";
 import { SEO } from "../../types/seo";
 import Seo from "../../components/seo";
+import StoryCard from "../../components/storyCard";
 
 type Props = {
   staticStory: STORIES,
@@ -18,7 +19,7 @@ const Story: NextPage<Props> = ({ staticStory, seoData }) => {
         <div className="container px-5 py-10 mx-auto">
           <div className="flex flex-wrap -m-4">
             {staticStory && staticStory.contents.map((data) => (
-              <HomeCard key={data.id} {...data} />
+              <StoryCard key={data.id} {...data} />
             ))}
           </div>
         </div>

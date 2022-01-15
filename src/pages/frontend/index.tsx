@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { fetchFrontendsDataAll, fetchFrontendsSEO } from "../../api/frontend/all";
 import { FRONTENDS } from "../../types/frontend";
-import HomeCard from "../../components/homeCard";
+import FrontendCard from "../../components/frontendCard";
 import Seo from "../../components/seo";
 import { SEO } from "../../types/seo"
 
@@ -18,7 +18,7 @@ const Frontend: NextPage<Props> = ({ staticFrontendData, seoData }) => {
         <div className="container px-5 py-10 mx-auto">
           <div className="flex flex-wrap -m-4">
             {staticFrontendData && staticFrontendData.contents.map((data) => (
-              <HomeCard key={data.id} {...data} />
+              <FrontendCard key={data.id} {...data} />
             ))}
           </div>
         </div>
