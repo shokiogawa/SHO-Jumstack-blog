@@ -1,4 +1,4 @@
-export type STORY = {
+export type FRONTEND = {
   id: string,
   publishedAt: string,
   title: string,
@@ -11,10 +11,6 @@ export type STORY = {
   description: string
 }
 
-export type STORIES = {
-  contents: [STORY]
-}
-
-export type STORYDETAIL = {
-  staticStoryDetail: STORY
+export type FRONTENDS = {
+  contents: [FRONTEND]
 }
