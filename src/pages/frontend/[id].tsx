@@ -10,6 +10,8 @@ type Props = {
 }
 
 const FrontendDetail: NextPage<Props> = ({ frontendDetail, seoData }) => {
+  if (!frontendDetail) return <div>Loading</div>
+  if (!seoData) return <div>Loading</div>
   return (
     <>
       <Seo {...seoData} />
